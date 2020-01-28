@@ -15,7 +15,7 @@ number.
 Constraints
 -----------
 1. Prompt the user to enter 2 numbers
-2. If the sum of the numbers is <= 100, print "They add up to ___."
+2. If the sum of the numbers is :math:'<=' 100, print "They add up to ___."
 3. If the sum of the numbers i > 100, print "They add up to a big number"
 
 """

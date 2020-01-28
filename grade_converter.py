@@ -19,7 +19,7 @@ Constraints
 =====   =====
 Grade	Range
 =====   =====
-A+      >= 99
+A+      :math:'>=' 99
 A	    93
 A-	    90-92
 B+	    87-89

@@ -1,0 +1,7 @@
+voting\_test module
+===================
+
+.. automodule:: voting_test
+    :members:
+    :undoc-members:
+    :show-inheritance:

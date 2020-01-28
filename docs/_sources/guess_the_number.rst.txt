@@ -1,0 +1,7 @@
+guess\_the\_number module
+=========================
+
+.. automodule:: guess_the_number
+    :members:
+    :undoc-members:
+    :show-inheritance:

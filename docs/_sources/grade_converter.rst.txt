@@ -1,0 +1,7 @@
+grade\_converter module
+=======================
+
+.. automodule:: grade_converter
+    :members:
+    :undoc-members:
+    :show-inheritance:

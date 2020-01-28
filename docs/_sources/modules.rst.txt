@@ -1,0 +1,10 @@
+ConditionalLogicPrograms
+========================
+
+.. toctree::
+   :maxdepth: 4
+
+   big_or_sum
+   grade_converter
+   guess_the_number
+   voting_test

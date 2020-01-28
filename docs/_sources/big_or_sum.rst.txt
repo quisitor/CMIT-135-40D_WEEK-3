@@ -1,0 +1,7 @@
+big\_or\_sum module
+===================
+
+.. automodule:: big_or_sum
+    :members:
+    :undoc-members:
+    :show-inheritance:
