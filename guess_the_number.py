@@ -16,9 +16,9 @@ Constraints
 1. Random number between 0 and 9, inclusive
 2. Import and use the randint method from the random module
 
-:param guess: Number input by user at the terminal
+:param guessed_input: Number input by user at the terminal
 
-:output response: 'Guess Higher', 'Guess Lower', 'You Guessed Right!'
+:output responses: 'Guess Higher', 'Guess Lower', 'Great job! You guessed the correct number: '
 
 """
 
@@ -26,6 +26,8 @@ Constraints
 from random import randint
 
 # Helper Functions
+
+
 def convert_str_to_num(str_number):
     """
     This function takes a string, validates it can be converted to a number
@@ -72,17 +74,17 @@ def lower_higher(answer, guess):
 random_number = randint(0, 9)
 matching_value = False
 
-guess = input('The computer has chosen a number at random between 0 and 9.\n '
-              'Please try and guess the chosen number: ')
+guessed_input = input('The computer has chosen a number at random between 0 and 9.\n '
+                      'Please try and guess the chosen number: ')
 
 while not matching_value:
-    guessed_number = convert_str_to_num(guess)
+    guessed_number = convert_str_to_num(guessed_input)
     result = lower_higher(random_number, guessed_number)
 
     if result == 'Guess Higher':
-        guess = input('Guess a Higher Number: ')
+        guessed_input = input('Guess a Higher Number: ')
     elif result == 'Guess Lower':
-        guess = input('Guess a Lower Number: ')
+        guessed_input = input('Guess a Lower Number: ')
     else:
         matching_value = result
 
