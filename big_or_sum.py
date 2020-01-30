@@ -39,12 +39,12 @@ def convert_str_to_num(str_number):
     """
 
     while True:
-        if str_number.replace('-', '', 1).isnumeric():                          # Check if number is a positive or negative integer
-            return int(str_number)                                              # Return a positive or negative integer
-        elif str_number.replace('-', '', 1).replace('.', '', 1).isnumeric():    # Check if number is a positive or negative rational number
-            return float(str_number)                                            # Return positive or negative float
+        if str_number.replace('-', '', 1).isnumeric():
+            return int(str_number)
+        elif str_number.replace('-', '', 1).replace('.', '', 1).isnumeric():
+            return float(str_number)
         else:
-            str_number = input('Please enter a valid number: ')                 # Query the user for a valid number if required
+            str_number = input('Please enter a valid number: ')
 
 
 print('Enter two numbers at the prompts. '
