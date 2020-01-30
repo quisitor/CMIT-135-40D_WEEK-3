@@ -86,4 +86,4 @@ while not matching_value:
     else:
         matching_value = result
 
-print('Great job! You guessed the correct number: ', guessed_number)
+print('Great job! You guessed the correct number: ', random_number)
