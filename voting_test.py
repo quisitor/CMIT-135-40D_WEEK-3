@@ -14,5 +14,26 @@ older and able to legally vote.
 Constraints
 -----------
 1. Prompt the user to enter their age
+2. Output uses the one of the following
+    a. 'You must be 18 to vote.'
+    b. 'You are of voting age.'
+
+:param age: user input - integer
+
+:returns:  answer if age qualifies person to vote - string
 
 """
+
+age_input = input("Please enter your age in years: ")
+
+while True:
+    try:
+        age = int(age_input)
+        break;
+    except ValueError:
+        age_input = input("Please enter your age in years: ")
+
+if age >= 18:
+    print("You are of voting age.")
+else:
+    print("You must be 18 to vote.")
