@@ -7,31 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>grade_converter module &#8212; Conditional Logic Modules  documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/language_data.js"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="guess_the_number module" href="guess_the_number.html" />
-    <link rel="prev" title="big_or_sum module" href="big_or_sum.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="prev" title="big_or_sum module" href="big_or_sum.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="guess_the_number.html" title="guess_the_number module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="big_or_sum.html" title="big_or_sum module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Conditional Logic Modules  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">ConditionalLogicPrograms</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <div class="section" id="module-grade_converter">
@@ -54,7 +66,7 @@
 </table>
 <div class="section" id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
-<p>This modue takes in a grade percentage from the user and converts it to a
+<p>This module takes in a grade percentage from the user and converts it to a
 letter grade based on a specific grading scale.</p>
 </div>
 <div class="section" id="constraints">
@@ -63,10 +75,28 @@ letter grade based on a specific grading scale.</p>
 <li>Prompt the user to enter a grade percentage</li>
 <li>Use the grading scale listed below</li>
 </ol>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">grade_percentage:</th>&#160;</td><td class="field-body">Number input by user at the terminal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">GRADING_SCALE:</th><td class="field-body">Dictionary mapping Letter Grade to Percentage</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">returns:</th><td class="field-body">Letter grade equivalent of the user entered percentage</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="grading-scale">
+<h2>GRADING SCALE<a class="headerlink" href="#grading-scale" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
-<col width="28%" />
-<col width="72%" />
+<col width="36%" />
+<col width="64%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Grade</th>
@@ -75,7 +105,7 @@ letter grade based on a specific grading scale.</p>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>A+</td>
-<td>:math:’&gt;=’ 99</td>
+<td>&gt;= 99</td>
 </tr>
 <tr class="row-odd"><td>A</td>
 <td>93</td>
@@ -115,48 +145,57 @@ letter grade based on a specific grading scale.</p>
 </tr>
 </tbody>
 </table>
+<dl class="function">
+<dt id="grade_converter.convert_str_to_num">
+<code class="descclassname">grade_converter.</code><code class="descname">convert_str_to_num</code><span class="sig-paren">(</span><em>str_number</em><span class="sig-paren">)</span><a class="headerlink" href="#grade_converter.convert_str_to_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a string, validates it can be converted to a number
+and returns either a string or float representation of the string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>str_number</strong> – a string representation of a number
+ex: “123”, “123.3”, “-123”, “-123.3”</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">an int or float representing the number in the string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 </div>
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">Conditional Logic Modules</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ConditionalLogicPrograms</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="big_or_sum.html">big_or_sum module</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">grade_converter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guess_the_number.html">guess_the_number module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="voting_test.html">voting_test module</a></li>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">grade_converter module</a><ul>
+<li><a class="reference internal" href="#purpose">Purpose</a></li>
+<li><a class="reference internal" href="#constraints">Constraints</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#grading-scale">GRADING SCALE</a></li>
 </ul>
 </li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">ConditionalLogicPrograms</a><ul>
-      <li>Previous: <a href="big_or_sum.html" title="previous chapter">big_or_sum module</a></li>
-      <li>Next: <a href="guess_the_number.html" title="next chapter">guess_the_number module</a></li>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="big_or_sum.html"
+                        title="previous chapter">big_or_sum module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="guess_the_number.html"
+                        title="next chapter">guess_the_number module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/grade_converter.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <div class="searchformwrapper">
@@ -169,32 +208,32 @@ letter grade based on a specific grading scale.</p>
     </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2020, Craig Smith.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/grade_converter.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="guess_the_number.html" title="guess_the_number module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="big_or_sum.html" title="big_or_sum module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Conditional Logic Modules  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >ConditionalLogicPrograms</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Craig Smith.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
   </body>
 </html>
