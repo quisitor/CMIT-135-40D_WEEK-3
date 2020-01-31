@@ -18,22 +18,24 @@ Constraints
     a. 'You must be 18 to vote.'
     b. 'You are of voting age.'
 
+Parameters
+----------
 :param age: user input - integer
-
 :returns:  answer if age qualifies person to vote - string
 
 """
 
-age_input = input("Please enter your age in years: ")
+if __name__ == '__main__':
+    age_input = input("Please enter your age in years: ")
 
-while True:
-    try:
-        age = int(age_input)
-        break;
-    except ValueError:
-        age_input = input("Please enter your age in years: ")
+    while True:
+        try:
+            age = int(age_input)
+            break;
+        except ValueError:
+            age_input = input("Please enter your age in years: ")
 
-if age >= 18:
-    print("You are of voting age.")
-else:
-    print("You must be 18 to vote.")
+    if age >= 18:
+        print("You are of voting age.")
+    else:
+        print("You must be 18 to vote.")

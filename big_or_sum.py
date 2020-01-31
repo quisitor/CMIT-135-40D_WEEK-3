@@ -18,9 +18,10 @@ Constraints
 2. If the sum of the numbers is <= 100, print 'They add up to ___.'
 3. If the sum of the numbers i > 100, print 'They add up to a big number'
 
+Parameters
+----------
 :param first_number: user input
 :param second_number: user input
-
 :terminal output: a message advising the sum is a big number or the number itself
 
 """
@@ -47,14 +48,15 @@ def convert_str_to_num(str_number):
             str_number = input('Please enter a valid number: ')
 
 
-print('Enter two numbers at the prompts. '
-      'You will receive a sum if they add up to < 101')
-print()
-first_number = convert_str_to_num(input('Please enter the first number: '))
-second_number = convert_str_to_num(input('Please enter the second number: '))
+if __name__ == '__main__':
+    print('Enter two numbers at the prompts. '
+          'You will receive a sum if they add up to < 101')
+    print()
+    first_number = convert_str_to_num(input('Please enter the first number: '))
+    second_number = convert_str_to_num(input('Please enter the second number: '))
 
-print()
-if first_number + second_number <= 100:
-    print("\nThey add up to ", first_number + second_number)
-else:
-    print("\nThey add up to a big number.")
+    print()
+    if first_number + second_number <= 100:
+        print("\nThey add up to ", first_number + second_number)
+    else:
+        print("\nThey add up to a big number.")

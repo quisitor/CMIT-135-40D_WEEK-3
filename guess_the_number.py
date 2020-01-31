@@ -16,8 +16,9 @@ Constraints
 1. Random number between 0 and 9, inclusive
 2. Import and use the randint method from the random module
 
+Parameters
+----------
 :param guessed_input: Number input by user at the terminal
-
 :output responses: 'Guess Higher', 'Guess Lower', 'Great job! You guessed the correct number: '
 
 """
@@ -71,21 +72,23 @@ def lower_higher(answer, guess):
 
 
 # Main
-random_number = randint(0, 9)
-matching_value = False
+if __name__ == '__main__':
+    random_number = randint(0, 9)
+    matching_value = False
 
-guessed_input = input('The computer has chosen a number at random between 0 and 9.\n '
-                      'Please try and guess the chosen number: ')
+    guessed_input = input('The computer has chosen a number at random between 0 and 9.\n '
+                          'Please try and guess the chosen number: ')
 
-while not matching_value:
-    guessed_number = convert_str_to_num(guessed_input)
-    result = lower_higher(random_number, guessed_number)
+    while not matching_value:
+        guessed_number = convert_str_to_num(guessed_input)
+        result = lower_higher(random_number, guessed_number)
 
-    if result == 'Guess Higher':
-        guessed_input = input('Guess a Higher Number: ')
-    elif result == 'Guess Lower':
-        guessed_input = input('Guess a Lower Number: ')
-    else:
-        matching_value = result
+        if result == 'Guess Higher':
+            guessed_input = input('Guess a Higher Number: ')
+        elif result == 'Guess Lower':
+            guessed_input = input('Guess a Lower Number: ')
+        else:
+            matching_value = result
 
-print('Great job! You guessed the correct number: ', random_number)
+    print('Great job! You guessed the correct number: ', random_number)
+

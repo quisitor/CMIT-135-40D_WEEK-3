@@ -16,11 +16,14 @@ Constraints
 1. Prompt the user to enter a grade percentage
 2. Use the grading scale listed below
 
-:param grade_percentage: Number input at the terminal by the user
-:constant GRADING_SCALE: Dictionary mapping Letter Grade to Percentage
-:return: Letter grade equivalent of the user entered percentage
+Parameters
+----------
+:grade_percentage: Number input by user at the terminal
+:GRADING_SCALE: Dictionary mapping Letter Grade to Percentage
+:returns: Letter grade equivalent of the user entered percentage
 
-
+GRADING SCALE
+-------------
 =====   =====
 Grade	Range
 =====   =====
@@ -86,19 +89,20 @@ def convert_str_to_num(str_number):
 
 # Main
 
-grade_percentage = input("Please enter your grade percentage: ")
-percentage_as_num = convert_str_to_num(grade_percentage)
-letter_grade = ""
+if __name__ == '__main__':
+    grade_percentage = input("Please enter your grade percentage: ")
+    percentage_as_num = convert_str_to_num(grade_percentage)
+    letter_grade = ""
 
-# Handle user values that our out of grading scale range
-if percentage_as_num < 0:
-    percentage_as_num = 0
-elif percentage_as_num > 100:
-    percentage_as_num = 100
+    # Handle user values that our out of grading scale range
+    if percentage_as_num < 0:
+        percentage_as_num = 0
+    elif percentage_as_num > 100:
+        percentage_as_num = 100
 
-# Obtain letter grade associated with the percentage value
-for key, value in GRADING_SCALE.items():
-    if int(percentage_as_num) in GRADING_SCALE[key]:
-        letter_grade = key
+    # Obtain letter grade associated with the percentage value
+    for key, value in GRADING_SCALE.items():
+        if int(percentage_as_num) in GRADING_SCALE[key]:
+            letter_grade = key
 
-print("letter_grade", letter_grade)
+    print("letter_grade", letter_grade)
