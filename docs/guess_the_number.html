@@ -82,9 +82,11 @@ the randomly generated number.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">param guessed_input:</th><td>&#160;</td><td class="field-body">Number input by user at the terminal</td>
+<tr class="field-odd field"><th class="field-name" colspan="2">param guessed_input:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Number input by user at the terminal</td>
 </tr>
-<tr class="field-even field"><th class="field-name">output responses:</th><td>&#160;</td><td class="field-body">‘Guess Higher’, ‘Guess Lower’, ‘Great job! You guessed the correct number: ‘</td>
+<tr class="field-even field"><th class="field-name" colspan="2">output responses:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">‘Sorry, you did not guess correctly.’, ‘You guessed correctly!’</td>
 </tr>
 </tbody>
 </table>
@@ -101,30 +103,6 @@ and returns either a string or float representation of the string.</p>
 ex: “123”, “123.3”, “-123”, “-123.3”</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">an int or float representing the number in the string</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="guess_the_number.lower_higher">
-<code class="descclassname">guess_the_number.</code><code class="descname">lower_higher</code><span class="sig-paren">(</span><em>answer</em>, <em>guess</em><span class="sig-paren">)</span><a class="headerlink" href="#guess_the_number.lower_higher" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function takes a known number and an unknown number and compares the
-difference. The function will return a message indicating to the calling
-function whether or not the user needs to guess higher or lower than the
-number just guessed.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>answer</strong> – known integer value determined by the calling function</li>
-<li><strong>guess</strong> – number passed in by the end user</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">‘Guess Higher’, ‘Guess Lower’, True</p>
-</td>
 </tr>
 </tbody>
 </table>
