@@ -19,7 +19,7 @@ Constraints
 Parameters
 ----------
 :param guessed_input: Number input by user at the terminal
-:output responses: 'Guess Higher', 'Guess Lower', 'Great job! You guessed the correct number: '
+:output responses: 'Sorry, you did not guess correctly.', 'You guessed correctly!'
 
 """
 
@@ -50,45 +50,17 @@ def convert_str_to_num(str_number):
             str_number = input('Please enter a valid number: ')
 
 
-def lower_higher(answer, guess):
-    """
-    This function takes a known number and an unknown number and compares the
-    difference. The function will return a message indicating to the calling
-    function whether or not the user needs to guess higher or lower than the
-    number just guessed.
-
-    :param answer: known integer value determined by the calling function
-    :param guess: number passed in by the end user
-    :return: 'Guess Higher', 'Guess Lower', True
-
-    """
-
-    if answer == guess:
-        return True
-    elif guess < answer:
-        return 'Guess Higher'
-    elif guess > answer:
-        return 'Guess Lower'
-
-
 # Main
 if __name__ == '__main__':
     random_number = randint(0, 9)
-    matching_value = False
+    # matching_value = False
 
     guessed_input = input('The computer has chosen a number at random between 0 and 9.\n '
                           'Please try and guess the chosen number: ')
 
-    while not matching_value:
-        guessed_number = convert_str_to_num(guessed_input)
-        result = lower_higher(random_number, guessed_number)
+    guessed_number = convert_str_to_num(guessed_input)
 
-        if result == 'Guess Higher':
-            guessed_input = input('Guess a Higher Number: ')
-        elif result == 'Guess Lower':
-            guessed_input = input('Guess a Lower Number: ')
-        else:
-            matching_value = result
-
-    print('Great job! You guessed the correct number: ', random_number)
-
+    if guessed_number == random_number:
+        print("You guessed correctly!")
+    else:
+        print("Sorry, you did not guess correctly.")

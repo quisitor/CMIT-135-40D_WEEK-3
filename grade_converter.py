@@ -105,4 +105,4 @@ if __name__ == '__main__':
         if int(percentage_as_num) in GRADING_SCALE[key]:
             letter_grade = key
 
-    print("letter_grade", letter_grade)
+    print(f"Your letter grade is a {letter_grade}.")
